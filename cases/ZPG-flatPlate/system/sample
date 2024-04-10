@@ -1,0 +1,26 @@
+type sets;
+//libs (“libsampling.so”)
+interpolationScheme cellPoint;
+setFormat raw;
+sets
+(
+ data_sec1 
+ {
+ type uniform;
+ axis y;
+ start (0.5  0.000 0.05);
+ end   (0.5  0.009 0.05);
+ nPoints 10000;
+ }
+ 
+ data_sec2 
+ {
+ type uniform;
+ axis y;
+ start (1.0  0.000 0.05);
+ end   (1.0  0.019 0.05);
+ nPoints 20000;
+ }
+
+);
+fields (U);
