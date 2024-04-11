@@ -4,6 +4,11 @@ This is an OpenFOAM Implementation of the SST-CND model described in [this artic
 
 The implementation is tested on OpenFOAM-v2312 and works fine.
 
+## Contact the authors
+Chenyu Wu, Tsinghua University (wcy22@mails.tsinghua.edu.cn)
+
+Yufei Zhang, Tsinghua University (zhangyufei@tsinghua.edu.cn)
+
 ## Performance
 Below are some comparisons between the SST-CND model and the SST model in various 2D and 3D cases. More detailed comparisons can be found in [this article](https://arxiv.org/ftp/arxiv/papers/2402/2402.16355.pdf). Note that Cf's mean square error in the separation zone is compared in the Hump case and the CBFS case. The error of the SST model is scaled to 100%. The NLR7301 high lift device is computed by CFL3D.
 
@@ -19,7 +24,7 @@ First, you should have OpenFOAM-v2312 installed on your system. Then you can fol
 
 * Clone the repository to anywhere you want on your system (you can also just download the `zip` file from GitHub if you wish):
     ```
-    git clone git@github.com:chairmanmao256/SST-CND-Turbulence-Model-for-OpenFOAM.git
+    git@github.com:chairmanmao256/SSTCND-OpenFOAM.git
     ```
 
 * From the root of the repository, run the following commands:
@@ -57,3 +62,16 @@ After running the script, if you have `gnuplot` correctly installed on your syst
 
 ![HumpCf](./Figures/Hump-Cf.png)
 ![ZPGCf](./Figures/ZPG-Cf.png)
+
+## Cite the model
+If you find the SST-CND model interesting and helpful to your work, please cite the paper:
+```
+@misc{wu2024development,
+      title={Development of a Generalizable Data-driven Turbulence Model: Conditioned Field Inversion and Symbolic Regression}, 
+      author={Chenyu Wu and Yufei Zhang},
+      year={2024},
+      eprint={2402.16355},
+      archivePrefix={arXiv},
+      primaryClass={physics.flu-dyn}
+}
+```
