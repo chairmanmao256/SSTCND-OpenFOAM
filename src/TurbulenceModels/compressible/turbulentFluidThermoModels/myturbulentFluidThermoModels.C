@@ -46,20 +46,8 @@ makeBaseTurbulenceModel
 // RAS models
 // -------------------------------------------------------------------------- //
 
-#include "mykEpsilon.H"
-makeRASModel(mykEpsilon);
-
-#include "myLaunderSharmaKE.H"
-makeRASModel(myLaunderSharmaKE);
-
-#include "SpalartAllmarasData.H"
-makeRASModel(SpalartAllmarasData);
-
-#include "kOmegaSSTInv.H"
-makeRASModel(kOmegaSSTInv);
-
-#include "kOmegaSSTnc.H"
-makeRASModel(kOmegaSSTnc);
+#include "kOmegaSSTCND.H"
+makeRASModel(kOmegaSSTCND);
 
 
 // -------------------------------------------------------------------------- //

@@ -126,6 +126,7 @@ kOmegaSSTCND<BasicTurbulenceModel>::kOmegaSSTCND
     {
         this->printCoeffs(type);
     }
+    Info<<"SST-CND turbulence models, for separated flow correction";
 }
 
 

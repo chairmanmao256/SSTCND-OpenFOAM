@@ -3,6 +3,7 @@
         "kOmegaSSTInv.C": "cpp",
         "myturbulentTransportModels.C": "cpp",
         "kOmegaSSTBase.C": "cpp",
-        "kOmegaSSTCND.C": "cpp"
+        "kOmegaSSTCND.C": "cpp",
+        "myturbulentFluidThermoModels.C": "cpp"
     }
 }
