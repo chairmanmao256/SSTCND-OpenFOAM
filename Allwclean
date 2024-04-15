@@ -1,0 +1,10 @@
+#!/bin/sh
+cd "${0%/*}" || exit
+#------------------------------------------------------------------------------
+
+wclean kOmegaSSTCND/compressible
+wclean kOmegaSSTCND/incompressible
+
+rm -f foamVersionThisIsCompiledFor
+
+#------------------------------------------------------------------------------
