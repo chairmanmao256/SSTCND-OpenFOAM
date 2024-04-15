@@ -175,11 +175,11 @@ void kOmegaSSTCND<BasicTurbulenceModel>::correct()
 
         dimensionedScalar low_eps_omg("low_eps_omg", dimensionSet(0,0,-1,0,0,0,0), 1e-14);
         dimensionedScalar low_eps_nu("low_eps_nu", dimensionSet(0,2,-1,0,0,0,0), 1e-14);
-        volTensorField R = -skew(fvc::grad(U)); 
-        volScalarField rd = (nut + this->nu()) / (0.1681 * sqr(this->y_) * mag(fvc::grad(U)) + low_eps_nu);
+        volTensorField R(-skew(fvc::grad(U)));
+        volScalarField rd((nut + this->nu()) / (0.1681 * sqr(this->y_) * mag(fvc::grad(U)) + low_eps_nu));
 
         // R_{ij}R_{ij} = -tr(R^2) = -tr(R_{ik}R_{kj}) = -R_{ik}R_{ki}, given that R_{ij} = -R_{ji}
-        lambda2_ = -scalar(1.0) * magSqr(R) / ((this->betaStar_ * this->omega_ + low_eps_omg) 
+        lambda2_ = -scalar(1.0) * magSqr(R) / ((this->betaStar_ * this->omega_ + low_eps_omg)
                                 *(this->betaStar_ * this->omega_ + low_eps_omg));
         fd_ = 1.0 - tanh(pow(8.0 * rd, 3));
 
