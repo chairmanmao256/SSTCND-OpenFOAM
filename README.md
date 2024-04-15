@@ -29,16 +29,8 @@ First, you should have OpenFOAM-v2312 installed on your system. Then you can fol
 
 * From the root of the repository, run the following commands:
     ```
-    cd src/TurbulenceModels/incompressible
-    wclean
-    wmakeLnInclude -u ../turbulenceModels
-    wmake
-    cd ../compressible
-    wclean
-    wmakeLnInclude -u ../turbulenceModels
-    wmake
+    ./Allwmake.sh
     ```
-    Note that after the compilation completed, the `.so` files are stored in `$FOAM_USER_LIBBIN`.
 * If you want to use the model for your simulation:
     * add the following line to the `system/controlDict` file (just pick one of them depending on your case):
         ```
